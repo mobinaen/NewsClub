@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  <title>صفحه نمایش اخبار</title>
+</head>
+
+<body class="main" dir="rtl">
+  <div id="sidenav">
+    <nav> 
+        <ul> 
+            <li id="sec"> <a href = "index.html"> اخبار </a></li>
+            <li> <a href = "login.html"> ورود / ثبت نام</a></li>
+        </ul>
+    </nav>
+  </div>
+  <div id="menubtn">
+    <img src="images/navicon9.jpg" id="menu">
+  </div>
+
+  <script>
+    var menubtn = document.getElementById("menubtn")
+    var menu = document.getElementById("menu")
+    var sidenav = document.getElementById("sidenav")
+
+    sidenav.style.right = "-200px"
+    menubtn.onclick = function(){
+        if (sidenav.style.right == "-200px"){
+            sidenav.style.right = "0"
+            menu.src = "images/closeicon3.png";
+        }
+        else{
+            sidenav.style.right = "-200px"
+            menu.src = "images/navicon9.jpg";
+        }
+    }
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 1000,
+        speedAsDuration: true
+    });
+  </script>
+
+
+  <div class="container">
+    <div class="news-item">
+      <!-- اینجا خبرها قرار خواهند گرفت -->
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+
+
+<!---------------- ظاهر نمونه ای ----------- -->
+  <div class="container">
+    <h2>اخبار امروز</h2>
+    <div class="news-item">
+      <h3>عنوان خبر 1</h3>
+      <p>موضوع: موضوع خبر 1</p>
+      <p>متن خبر: اینجا متن خبر 1 قرار می‌گیرد.</p>
+    </div>
+    <div class="news-item">
+      <h3>عنوان خبر 2</h3>
+      <p>موضوع: موضوع خبر 2</p>
+      <p>متن خبر: اینجا متن خبر 2 قرار می‌گیرد.</p>
+    </div>
+    <div class="news-item">
+      <h3>عنوان خبر 3</h3>
+      <p>موضوع: موضوع خبر 3</p>
+      <p>متن خبر: اینجا متن خبر 3 قرار می‌گیرد.</p>
+    </div>
+  </div>
+
+</body>
+</html>

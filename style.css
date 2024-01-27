@@ -1,0 +1,270 @@
+/* main */
+
+.main {
+  font-family: Arial, sans-serif;
+  background-color: #EEEDEB;
+}
+
+.main .container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.main .news-item {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.main .news-item h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.main .news-item p {
+  margin-bottom: 5px;
+}
+
+.main h2 {
+  text-align: center;
+}
+
+#sidenav{
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  right: -200px;
+  top: 0;
+  background: #3C3633;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+#sec {
+  margin-top: 100px;
+}
+
+nav ul li{
+  list-style: none;
+  margin: 50px 20px;
+}
+
+
+nav ul li a{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+#menubtn{
+  width: 50px;
+  height: 50px;
+  background: #3C3633;
+  text-align: center;
+  position: fixed;
+  right: 30px;
+  top: 20px;
+  border-radius: 3px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+#menubtn img{
+  width: 20px;
+  margin-top: 15px;
+}
+
+
+
+/* login */
+
+.login {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(rgba(55, 54, 54, 0.2), #7c736e);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.banner-button{
+  margin: 300px auto 0;
+  text-align: center;
+}
+
+.banner-button a {
+  width: 200px;
+  font-size: 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 10px;
+  padding: 12px 0;
+  color: rgb(16, 17, 17);
+  border: 2px solid rgb(40, 42, 43);
+  position: relative;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.banner-button a span{
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #3C3633;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.banner-button a:hover span{
+  width: 100%;
+}
+
+.banner-button a:hover{
+  color: rgb(246, 242, 242);
+}
+
+
+
+/* register */
+
+.register {
+  font-family: Arial, sans-serif;
+  background-color: #EEEDEB;
+}
+
+.register .checkbox-group label {
+  margin-right: 10px;
+  text-align: center;
+}
+
+.register .checkboxes {
+  margin: 0 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.register .container {
+  max-width: 500px;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #b3b1b1;
+  border-radius: 5px;
+  background-color: #ddd2cbe2;
+}
+
+.register .form-group {
+  margin-bottom: 20px;
+}
+
+.register label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.register input[type="text"],
+input[type="tel"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #f2f0ed;
+}
+
+.register input[type="submit"] {
+  background-color: #747264;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.register input[type="submit"]:hover {
+  background-color: #3C3633;
+}
+
+
+/* admin */
+
+.admin {
+  font-family: Arial, sans-serif;
+  background-color: #EEEDEB;
+}
+
+.admin .container {
+  max-width: 600px;
+  margin: 85px auto;
+  padding: 20px;
+  border: 1px solid #b3b1b1;
+  border-radius: 5px;
+  background-color: #ddd2cbe2;
+}
+
+.admin .form-group {
+  margin-bottom: 20px;
+}
+
+.admin label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.admin input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #f2f0ed;
+}
+
+#last-name {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #f2f0ed;
+}
+
+.admin textarea {
+  width: 100%;
+  height: 200px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #f2f0ed;
+  resize: none;
+}
+
+.admin input[type="submit"] {
+  background-color: #747264;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.admin input[type="submit"]:hover {
+  background-color: #3C3633;
+}
+
+#btnad {
+  background-color: #747264;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#btnad:hover {
+  background-color: #3C3633;
+}
