@@ -1,51 +1,35 @@
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'username',
-    password: 'password',
-    database: 'database_name'
-  });
-  
-  connection.connect(function(err) {
-    if (err) {
-      console.error('خطا در اتصال به پایگاه داده: ' + err.stack);
-      return;
-    }
-  
-    console.log('اتصال موفق به پایگاه داده با شناسه ' + connection.threadId);
-  });
-  
-  function loadNews() {
-    connection.query('SELECT * FROM news', function(error, results, fields) {
-      if (error) {
-        console.error() }
+const container = document.getElementById('container');
+const registerBtn = document.getElementById('register');
+const loginBtn = document.getElementById('login');
 
-  
-  ```javascript
-  document.getElementById('newsForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-  
-    const title = document.getElementById('title').value;
-    const category = document.getElementById('category').value;
-    const content = document.getElementById('content').value;
-  
-    const data = {
-      title: title,
-      category: category,
-      content: content
-    };
-  
-    fetch('/save-news', {
+registerBtn.addEventListener('click', () => {
+    container.classList.add("active");
+});
+
+loginBtn.addEventListener('click', () => {
+    container.classList.remove("active");
+});
+
+const BASE_URL="http://server-api.ir"
+
+
+let apiData = {
+    "name":"mmd",
+    "lastname":"m",
+    "phone":"09921321311",
+    "topics":"tech,sport,politics"
+}
+
+fetch(BASE_URL+'/user/create', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(data)
+      body: JSON.stringify(apiData)
     })
-    .then(response => response.json())
-    .then(result => {
-      // دریافت پاسخ از سمت سرور و انجام عملیات مورد نیاز
+    .then(res => {
+      console.log(res)
     })
     .catch(error => {
       console.error('خطا در ارسال درخواست: ' + error);
     });
-  });``` } ) }
