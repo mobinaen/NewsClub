@@ -1,8 +1,15 @@
+@font-face {
+    font-family: "IranSans";
+    src: url("./font/IRANSansMobile.ttf");
+}
+
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: IranSans, serif;
+
 }
 
 body{
@@ -102,6 +109,7 @@ body{
 }
 
 textarea {
+  direction: rtl;
   width: 100%;
   height: 200px;
   padding: 5px;
@@ -383,4 +391,10 @@ color: rgb(246, 242, 242);
   .cards{
       grid-template-columns: 1fr;
   }
+}
+
+
+input{
+    direction: rtl;
+
 }
